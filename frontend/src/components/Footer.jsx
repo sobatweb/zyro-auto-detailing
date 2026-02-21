@@ -1,4 +1,4 @@
-import { Instagram, Mail, Phone } from 'lucide-react';
+import { Instagram, Mail, Phone, MapPin, Clock } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -22,13 +22,13 @@ const Footer = () => {
           {/* Column 2: Location */}
           <div className="space-y-4">
             <h3 className="text-lg font-bold flex items-center gap-2">
-              <span>📍</span> Location
+              <MapPin size={20} /> Location
             </h3>
             <p className="text-gray-400 text-sm">
               Zyro Autodetailing
             </p>
             <a 
-              href="https://share.google/YJdnD8u81vdqImeDb" 
+              href="https://www.google.com/maps/place/Zyro+Autodetailing/@-6.2009008,106.5211365,17z/data=!3m1!4b1!4m6!3m5!1s0x2e4201004db9d6e5:0xc30c41eb2e711c2c!8m2!3d-6.2009008!4d106.5237114!16s%2Fg%2F11yklwhy2v?hl=id-ID&entry=ttu&g_ep=EgoyMDI2MDIxOC4wIKXMDSoASAFQAw%3D%3D" 
               target="_blank" 
               rel="noreferrer"
               className="inline-block bg-red-600 hover:bg-red-700 text-white text-sm font-bold py-2.5 px-6 rounded-full transition-colors"
@@ -37,9 +37,10 @@ const Footer = () => {
             </a>
           </div>
 
+          {/* Column 3: Jam Operasional */}
           <div className="space-y-4">
             <h3 className="text-lg font-bold flex items-center gap-2">
-              <span>⏰</span> Jam Operasional
+              <Clock size={20} /> Jam Operasional
             </h3>
             <div className="text-gray-400 text-sm space-y-1">
               <p>Monday – Sunday</p>
@@ -47,6 +48,7 @@ const Footer = () => {
             </div>
           </div>
 
+          {/* Column 4: Contact Us */}
           <div className="space-y-4">
             <h3 className="text-lg font-bold">Contact Us</h3>
             <div className="space-y-3 text-sm text-gray-400">
