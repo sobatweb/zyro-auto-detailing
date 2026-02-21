@@ -86,7 +86,7 @@ const FAQ = () => {
     const rightColumn = faqData.filter((_, index) => index % 2 !== 0);
 
     return (
-        <section className="py-20 px-6 md:px-16 bg-[#050505] relative overflow-hidden">
+        <section id="faq" className="py-20 px-6 md:px-16 bg-[#050505] relative overflow-hidden">
             {/* Decorative Glows */}
             <div className="absolute top-0 left-1/4 w-72 h-72 bg-red-600/5 blur-[100px] pointer-events-none" />
             <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-red-600/5 blur-[100px] pointer-events-none" />
