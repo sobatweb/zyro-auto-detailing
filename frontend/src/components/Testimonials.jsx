@@ -3,12 +3,12 @@ import { Star, ShieldCheck } from 'lucide-react';
 
 const Testimonials = () => {
   const reviews = [
-    { name: "Andra S.", car: "Porsche 911 GT3", text: "PPF-nya hampir tidak terlihat. Presisi pemotongan di bagian lekukan body sangat rapi. Studio detailing terbaik yang pernah saya coba.", status: "VVIP MEMBER" },
-    { name: "Bobby K.", car: "BMW M4 Competition", text: "Paint correction-nya luar biasa. Mobil saya yang penuh swirl marks kembali seperti baru turun dari kontainer.", status: "REPEAT CLIENT" },
-    { name: "Dimas R.", car: "Range Rover Vogue", text: "Layanan penjemputan dengan towing tertutup sangat aman. Gak perlu khawatir mobil kotor lagi di jalan.", status: "PREMIUM CLIENT" },
-    { name: "Irfan M.", car: "Civic Type R", text: "Coating 9H-nya bikin air lari semua. Cuci mobil jadi jauh lebih gampang dan cat selalu terlihat basah (wet-look).", status: "GOLD MEMBER" },
-    { name: "Sultan A.", car: "Mercedes G63", text: "Custom carbon kit-nya presisi 100%. Pemasangan rapi dan tidak ada bunyi getaran sama sekali.", status: "VVIP MEMBER" },
-    { name: "Kevin L.", car: "Tesla Model 3", text: "Interior detailing-nya sampai ke sela-sela terkecil. Bau kabin jadi segar tanpa parfum yang menyengat.", status: "REGULAR CLIENT" }
+    { name: "Susi susan", car: "Mobil", text: "Pas masuk harga promo akhir tahun ,tapi hasil ga kaleng2, melebihi ekspektasi Mantap bnerr 👍👍👍👍", status: "CLIENT" },
+    { name: "adi tob", car: "Mobil", text: "Tempatnya nyaman, detailing enggine mesin nya ramah dan teliti , pelayanan yang super nyaman... Sukses selalu", status: "CLIENT" },
+    { name: "Rinda Aprillia", car: "Mobil", text: "harga murah dibandingkan tempat lain, layanan disini juga sangat ramah, cukup rekomen lah", status: "CLIENT" },
+    { name: "Rehan Alfarizi", car: "Avanza", text: "saya cat & coating mobil avanza, harganya murah dibanding tempat lain tapi kualitas jos 👍 hitamnya mengkilap, owner komunikatif kl saya nanya2. Sukses terus om", status: "CLIENT" },
+    { name: "Umar Adin", car: "Mobil", text: "ownernya ramah banget, layanan disini juga bagus dan satset, kualitas sangat baik", status: "CLIENT" },
+    { name: "adi andriani", car: "Mobil", text: "sy ada mobil proyek, turun mesin sekalian benerin cat body, cakep luar dalem", status: "CLIENT" }
   ];
 
   return (
@@ -49,6 +49,7 @@ const Testimonials = () => {
           </motion.div>
         ))}
       </div>
+      
     </section>
   );
 };

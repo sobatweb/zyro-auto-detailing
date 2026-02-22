@@ -13,19 +13,19 @@ const About2 = () => {
       thumbnail: img1, // Menggunakan variabel import
       postUrl: "https://www.instagram.com/reel/DS7m4gjE2XR/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==",
       type: "Reels",
-      label: "Process of Coating"
+      label: "@zyro.autodetailing"
     },
     {
       thumbnail: img2, 
       postUrl: "https://www.instagram.com/p/DTp6dY1EyVT/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==",
       type: "Post",
-      label: "Engine Bay Detail"
+      label: "@zyro.autodetailing"
     },
     {
       thumbnail: img3,
       postUrl: "https://www.instagram.com/p/DS_wrP8E8pn/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==",
       type: "Post",
-      label: "Interior Deep Clean"
+      label: "@zyro.autodetailing"
     }
   ];
 
