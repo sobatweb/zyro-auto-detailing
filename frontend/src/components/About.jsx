@@ -13,23 +13,23 @@ const About = () => {
 
   const services = [
     {
-      title: "Paint Protection Film",
-      tag: "Free Coating Package",
+      title: "Coating Package",
+      tag: "Diskon Up To 30% / Free Anti Karat",
       img: "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=800"
     },
     {
-      title: "Wrapping",
-      tag: "Free Coating Package",
+      title: "Interior Series",
+      tag: "Jok Permanen + Door Trim + Knoob Trim",
       img: "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800"
     },
     {
-      title: "Coating",
-      tag: "Discount Up to 20%",
+      title: "Exterior Series",
+      tag: "Window Film",
       img: "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=800"
     },
     {
       title: "Body Repair & Repaint",
-      tag: "Free Coating Package",
+      tag: "With Coating Promo",
       img: "https://images.unsplash.com/photo-1599256621730-535171e28e50?w=800"
     },
   ];
@@ -124,7 +124,7 @@ const About = () => {
 
         {/* --- Footer About (Stats & Deskripsi) --- */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -141,7 +141,7 @@ const About = () => {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </motion.div> */}
 
           <div className="flex justify-center md:justify-end">
             <motion.button
