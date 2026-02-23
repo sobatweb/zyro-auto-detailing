@@ -15,7 +15,8 @@ const Footer = () => {
               <span className="font-black text-xl tracking-tighter uppercase">Autodetailing</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
-              TUNGGU DANIEL
+                Zyro lahir dari filosofi kata "zero" atau nol, titik mula sebagaimana didefinisikan KBBI. Makna yang kami wujudkan dalam automotive detailing, berdedikasi tinggi untuk mengembalikan body ke kondisi murninya; bebas dari swirl, goresan, dan sisa overspray yang menutupi jati diri kilau asli kendaraan anda.
+                
             </p>
           </div>
 

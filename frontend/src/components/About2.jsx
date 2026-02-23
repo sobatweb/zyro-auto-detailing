@@ -158,7 +158,7 @@ const About2 = () => {
                 key={index} 
                 src={logo} 
                 alt="Sponsor" 
-                className="h-12 md:h-16 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"
+                className="h-12 md:h-16 w-auto object-contain  transition-all duration-300 cursor-pointer"
               />
             ))}
           </div>

@@ -13,12 +13,12 @@ const About = () => {
   const services = [
     {
       title: "Coating Package",
-      tag: "Diskon Up To 30%",
+      tag: "5 types of packages",
       img: coa
     },
     {
       title: "Interior Series",
-      tag: "Jok & Door Trim",
+      tag: "Jok Trim",
       img: int
     },
     {
@@ -28,7 +28,7 @@ const About = () => {
     },
     {
       title: "Body Repair & Repaint",
-      tag: "With Coating Promo",
+      tag: "Repair & Repaint",
       img: rep
     },
   ];

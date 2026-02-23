@@ -50,7 +50,7 @@ const BodyWork = () => {
       {/* Hero Section */}
       <div className="flex flex-col lg:flex-row gap-10 md:gap-16 items-center mb-24 md:mb-40">
         <div className="w-full lg:w-1/2 space-y-4 md:space-y-6 text-center lg:text-left">
-          <h2 className="font-horizon text-[28px] sm:text-4xl md:text-6xl text-white tracking-tight md:tracking-tighter italic leading-[1.1] md:leading-none break-words">
+          <h2 className="font-horizon text-[26px] sm:text-4xl md:text-5xl text-white tracking-tight md:tracking-tighter italic leading-[1.1] md:leading-none break-words">
             RESTORATION & <br />
             <span className="text-magenta-300">PERFECTION.</span>
           </h2>
