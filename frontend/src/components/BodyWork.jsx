@@ -6,9 +6,7 @@ import foto1 from '../assets/bodywork/foto1.jpg';
 import foto2 from '../assets/bodywork/foto2.jpg';
 import foto3 from '../assets/bodywork/foto3.jpg';
 import foto4 from '../assets/bodywork/foto4.jpg';
-import foto5 from '../assets/bodywork/foto5.jpg';
-import foto6 from '../assets/bodywork/foto6.jpg';
-import foto7 from '../assets/bodywork/foto7.jpg';
+
 
 const BodyWork = () => {
   const points = [
@@ -39,10 +37,7 @@ const BodyWork = () => {
     { url: foto1 },
     { url: foto2},
     { url: foto3 },
-    { url: foto4 },
-    { url: foto5},
-    { url: foto6},
-    { url: foto7}
+    { url: foto4 }
   ];
 
   return (
