@@ -6,20 +6,16 @@ import BgImage from '../assets/gallery/bg.jpeg';
 import LogoImg from '../assets/logo/logo1.webp';
 
 // Import gambar untuk carousel 
-import CarouselImg1 from '../assets/logo/logo-t/1.png';
-import CarouselImg2 from '../assets/logo/logo-t/2.png';
-import CarouselImg3 from '../assets/logo/logo-t/3.png';
 import CarouselImg4 from '../assets/logo/logo-t/4.png';
 import CarouselImg5 from '../assets/logo/logo-t/5.png';
 import CarouselImg6 from '../assets/logo/logo-t/6.png';
 import CarouselImg7 from '../assets/logo/logo-t/7.png';
-import CarouselImg8 from '../assets/logo/logo-t/8.png';
 import CarouselImg9 from '../assets/logo/logo-t/9.png';
 import CarouselImg10 from '../assets/logo/logo-t/10.png';
 import CarouselImg11 from '../assets/logo/logo-t/11.png';
 
 const Hero = () => {
-  const carouselImages = [CarouselImg1, CarouselImg2, CarouselImg3, CarouselImg4, CarouselImg5, CarouselImg6, CarouselImg7, CarouselImg8, CarouselImg9, CarouselImg10, CarouselImg11];
+  const carouselImages = [CarouselImg4, CarouselImg5, CarouselImg6, CarouselImg7, CarouselImg9, CarouselImg10, CarouselImg11];
   const services = ['Coating Package', 'Interior Series', 'Exterior Series', 'Body Work'];
 
   return (
@@ -157,14 +153,14 @@ const Hero = () => {
 
       {/* --- Carousel Marquee (Z-Index Tinggi, Background Gelap) --- */}
       {/* Tambahkan z-50 agar selalu di atas konten yang ter-scroll */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden bg-black/90 py-6 md:py-10 backdrop-blur-xl z-50 border-t border-white/10 flex items-center">
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden bg-black/90 py-6 md:py-10 backdrop-blur-xl z-50 border-t border-white/10 flex items-center pt-12 md:pt-5">
         <div className="flex w-max animate-marquee gap-8 items-center">
           {[...carouselImages, ...carouselImages, ...carouselImages, ...carouselImages].map((img, i) => (
             <div key={i} className="flex-shrink-0 w-28 md:w-44 lg:w-52 flex justify-center items-center px-4">
               <img
                 src={img}
                 alt={`Brand ${i}`}
-                className="h-10 md:h-16 lg:h-20 w-auto object-contain opacity-100 transition-all duration-300"
+                className="h-24 md:h-22 lg:h-24 w-auto object-contain opacity-100 transition-all duration-300"
               />
             </div>
           ))}

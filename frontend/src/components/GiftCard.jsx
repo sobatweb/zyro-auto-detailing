@@ -95,10 +95,22 @@ const GiftCard = () => {
                   <div className="space-y-6 text-center">
                     {/* TEXT TETAP ORIGINAL */}
                     <p className="text-gray-400 font-medium text-sm md:text-base leading-relaxed italic">
-                      Zyro lahir dari filosofi kata "zero" atau nol, titik mula sebagaimana didefinisikan KBBI. Makna yang kami wujudkan dalam automotive detailing, berdedikasi tinggi untuk mengembalikan body ke kondisi murninya; bebas dari swirl, goresan, dan sisa overspray yang menutupi jati diri kilau asli kendaraan anda.
+                      Terima kasih sudah mempercayakan kendaraan Anda kepada Zyro Autodetailing. Bagi kami, setiap mobil yang datang bukan sekadar objek pengerjaan, melainkan simbol nilai dan kebanggaan yang layak dirawat dengan standar terbaik.
                     </p>
                     <p className="text-gray-400 font-medium text-sm md:text-base leading-relaxed italic">
-                      Komitmen kami adalah memberikan standar proteksi yang melampaui ekspektasi industri. Selamat menikmati pengalaman berkendara dengan kemilau yang berbeda.
+                      Zyro terinspirasi dari filosofi kata zero yang berarti titik awal, sebuah komitmen untuk mengembalikan setiap kendaraan ke kondisi paling murninya, bersih dari swirl, goresan halus, dan sisa overspray yang menutupi karakter asli cat.
+                    </p>
+                    <p className="text-gray-400 font-medium text-sm md:text-base leading-relaxed italic">
+                      Kami tidak hanya mengejar kilap sesaat. Melalui proses paint correction yang terukur dan tahapan surface refinement yang presisi, kami memulihkan kedalaman warna, kejernihan refleksi, serta definisi gloss agar tampil sebagaimana seharusnya sejak awal.
+                    </p>
+                    <p className="text-gray-400 font-medium text-sm md:text-base leading-relaxed italic">
+                      Komitmen kami adalah menghadirkan standar proteksi yang melampaui ekspektasi industri. Pemilihan material coating berbasis ceramic nanotechnology, pembaruan teknik kerja, dan kontrol kualitas yang konsisten menjadi fondasi agar hasil tidak hanya indah saat selesai, tetapi bertahan dalam penggunaan jangka panjang.
+                    </p>
+                    <p className="text-gray-400 font-medium text-sm md:text-base leading-relaxed italic">
+                      Di balik setiap hasil, ada tim detailer dan polisher yang bekerja dengan disiplin dan ketelitian tinggi. Karena bagi kami, perbedaan besar selalu lahir dari perhatian pada detail kecil.
+                    </p>
+                    <p className="text-gray-400 font-medium text-sm md:text-base leading-relaxed italic">
+                      Selamat menikmati pengalaman berkendara dengan kemilau yang kembali ke titik terbaiknya.
                     </p>
                   </div>
                 </div>
