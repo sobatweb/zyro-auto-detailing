@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Instagram, Play } from "lucide-react";
 
 // 1. Import gambar & video secara manual dari folder assets
-import img1 from "../assets/gallery/post-1.webp";
+import img1 from "../assets/gallery/1.jpg";
 import img2 from "../assets/gallery/post-2.webp";
 import img3 from "../assets/gallery/post-3.webp";
 import vid1 from "../assets/gallery/video/1.mp4";
@@ -20,7 +20,7 @@ const About2 = () => {
   const instagramFeeds = [
     {
       thumbnail: img1,
-      postUrl: "https://www.instagram.com/reel/DS7m4gjE2XR/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==",
+      postUrl: "https://www.instagram.com/reel/DUf58rRk7MG/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
       type: "Reels",
       label: "@zyro.autodetailing"
     },
