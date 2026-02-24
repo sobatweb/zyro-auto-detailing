@@ -46,8 +46,8 @@ const Navbar = () => {
 
   return (
     <nav
-      // BACKGROUND SELALU SOLID #1a0812
-      className={`fixed top-0 left-0 w-full z-[100] px-6 md:px-12 transition-all duration-500 border-b bg-[#1a0812] ${
+      // BACKGROUND LEBIH GELAP: #0f0208
+      className={`fixed top-0 left-0 w-full z-[100] px-6 md:px-12 transition-all duration-500 border-b bg-[#0f0208] ${
         isScrolled
           ? 'py-2 shadow-[0_4px_30px_rgba(244,168,208,0.1)] border-[#f4a8d0]/20' 
           : 'py-4 border-transparent shadow-none'
@@ -60,7 +60,7 @@ const Navbar = () => {
           <img
             src={logo} 
             alt="Zyro Logo"
-            className="h-10 md:h-14 w-auto object-contain group-hover:scale-105 rounded-full transition-transform duration-300 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]"
+            className="h-14 md:h-14 w-auto object-contain group-hover:scale-105 rounded-full transition-transform duration-300 drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]"
           />
         </div>
 
@@ -108,7 +108,8 @@ const Navbar = () => {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 h-screen w-[85vw] max-w-sm bg-[#1a0812] border-l border-[#f4a8d0]/20 z-[155] flex flex-col p-10 md:hidden shadow-[-20px_0_50px_rgba(0,0,0,0.8)]"
+              // DRAWER BACKGROUND JUGA DIUBAH KE #0f0208
+              className="fixed top-0 right-0 h-screen w-[85vw] max-w-sm bg-[#0f0208] border-l border-[#f4a8d0]/20 z-[155] flex flex-col p-10 md:hidden shadow-[-20px_0_50px_rgba(0,0,0,0.8)]"
             >
               <div className="flex flex-col h-full justify-center space-y-8">
                 {links.map((link, i) => (
