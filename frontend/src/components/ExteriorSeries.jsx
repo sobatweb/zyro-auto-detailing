@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShieldCheck, ThermometerSnowflake, CheckCircle2, Camera } from 'lucide-react';
+import { ShieldCheck, ThermometerSnowflake, CheckCircle2, Camera,ImageIcon } from 'lucide-react';
 import Riben from '../assets/logo/riben.webp';
 import ProMaster from '../assets/logo/ProMaster.webp';
 import CPF1 from '../assets/logo/Cpf1.webp';
@@ -9,6 +9,9 @@ import ThreeM from '../assets/logo/3mAuto.webp';
 import foto1 from '../assets/exterior/foto1.jpg';
 import foto2 from '../assets/exterior/foto2.jpg';
 import foto3 from '../assets/exterior/foto3.jpg';
+import foto4 from '../assets/exterior/foto4.jpg';
+
+
 
 const ExteriorSeries = () => {
   const packages = [
@@ -74,7 +77,7 @@ const ExteriorSeries = () => {
     }
   ];
 
-  const exteriorGallery = [{ url: foto1 }, { url: foto2 }, { url: foto3 }];
+  const exteriorGallery = [{ url: foto1 }, { url: foto2 }, { url: foto3 }, { url: foto4 }];
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12 md:py-20">
@@ -84,6 +87,7 @@ const ExteriorSeries = () => {
             key={index}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             className={`bg-[#0D0D0D] border-2 rounded-[2.5rem] p-7 flex flex-col items-center relative overflow-hidden group hover:scale-[1.02] transition-all duration-500 ${pkg.glow}`}
             style={{ borderColor: pkg.accent }}
           >
@@ -118,43 +122,31 @@ const ExteriorSeries = () => {
             </div>
 
             <div 
-              className="absolute -bottom-10 -right-10 w-32 h-32 blur-[60px] opacity-20 rounded-full"
+              className="absolute -bottom-10 -right-10 w-32 h-32 blur-[30px] opacity-20 rounded-full"
               style={{ backgroundColor: pkg.accent }}
             />
           </motion.div>
         ))}
       </div>
 
-      <div className="mt-20 md:mt-32 mb-10 md:mb-20">
-        <div className="flex flex-col items-center mb-10 md:mb-16">
-          <div className="flex items-center gap-3 mb-2">
-            <span className="h-[1px] w-8 md:w-12 bg-white/20"></span>
-            <Camera className="text-white/80" size={20} />
-            <span className="h-[1px] w-8 md:w-12 bg-white/20"></span>
+     {/* Grid Gallery Seragam */}
+      <div className="mt-20">
+        <div className="flex items-center gap-4 mb-10">
+          <div className="h-[1px] flex-1 bg-white/10"></div>
+          <div className="flex items-center gap-2">
+            <ImageIcon className="text-blue-400" size={20} />
+            <h3 className="font-horizon text-lg md:text-xl text-white uppercase tracking-[0.2em] md:tracking-[0.3em]">Exterior Gallery</h3>
           </div>
-          <h3 className="font-horizon text-3xl md:text-4xl text-white uppercase italic tracking-tighter text-center">Exterior Gallery</h3>
+          <div className="h-[1px] flex-1 bg-white/10"></div>
         </div>
 
-       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 h-auto md:h-[750px]">
-        {exteriorGallery.map((img, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            className={`relative overflow-hidden rounded-[1.5rem] md:rounded-[3rem] border border-white/10 group shadow-2xl aspect-square md:aspect-auto
-              ${i === 0 ? 'col-span-2 md:col-span-2 md:row-span-2' : ''} 
-              ${i === 1 ? 'col-span-1 md:col-span-2 md:row-span-1' : ''}
-              ${i === 2 ? 'col-span-1 md:col-span-2 md:row-span-1' : ''}`}
-          >
-            <img 
-              src={img.url} 
-              alt="Exterior" 
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s]" 
-            />
-         
-          </motion.div>
-        ))}
-      </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+          {exteriorGallery.map((img, i) => (
+            <motion.div key={i} whileHover={{ y: -5 }} className="relative aspect-square rounded-xl md:rounded-2xl overflow-hidden border border-white/5 group">
+              <img src={img.url} alt="Exterior" className="w-full h-full object-cover transition-all duration-700" />
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   );

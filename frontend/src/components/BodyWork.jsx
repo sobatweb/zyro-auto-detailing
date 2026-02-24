@@ -1,12 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Wrench, Paintbrush, Layers, Camera } from 'lucide-react';
+import { Wrench, Paintbrush, Layers, Camera,ImageIcon } from 'lucide-react';
 
 import foto1 from '../assets/bodywork/foto1.jpg';
-import foto2 from '../assets/bodywork/foto2.jpg';
 import foto3 from '../assets/bodywork/foto3.jpg';
 import foto4 from '../assets/bodywork/foto4.jpg';
-
+import foto8 from '../assets/bodywork/foto8.jpg';
 
 const BodyWork = () => {
   const points = [
@@ -35,9 +34,9 @@ const BodyWork = () => {
 
   const bodyGallery = [
     { url: foto1 },
-    { url: foto2},
     { url: foto3 },
-    { url: foto4 }
+    { url: foto4 },
+    { url: foto8 }
   ];
 
   return (
@@ -59,7 +58,8 @@ const BodyWork = () => {
             <motion.div 
               key={item.id} 
               initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
               className="flex gap-4 md:gap-6 p-5 md:p-6 rounded-[1.5rem] md:rounded-[2rem] bg-white/5 border border-white/10 transition-all hover:bg-white/10"
             >
               <div className={`w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center shrink-0`}>
@@ -74,38 +74,21 @@ const BodyWork = () => {
         </div>
       </div>
 
-      {/* Gallery Section */}
-      <div className="mt-10 md:mt-20">
-        <div className="flex flex-col items-center mb-10 md:mb-16">
-          <Camera className="text-magenta-300 mb-4" size={24} />
-          <h3 className="font-horizon text-2xl md:text-4xl text-white uppercase italic text-center">Project Gallery</h3>
+     {/* Grid Gallery Seragam */}
+      <div className="mt-20">
+        <div className="flex items-center gap-4 mb-10">
+          <div className="h-[1px] flex-1 bg-white/10"></div>
+          <div className="flex items-center gap-2">
+            <ImageIcon className="text-magenta-300" size={20} />
+            <h3 className="font-horizon text-lg md:text-xl text-white uppercase tracking-[0.2em] md:tracking-[0.3em]">Project Gallery</h3>
+          </div>
+          <div className="h-[1px] flex-1 bg-white/10"></div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 h-auto md:h-[750px]">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
           {bodyGallery.map((img, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className={`relative overflow-hidden rounded-[1.2rem] md:rounded-[3rem] border border-white/10 group shadow-2xl
-                /* Mobile: Kotak, Desktop: Bento Height */
-                aspect-square md:aspect-auto
-                /* Bento Grid Logic */
-                ${i === 0 ? 'col-span-2 md:col-span-2 md:row-span-2' : ''} 
-                ${i === 1 ? 'col-span-2 md:col-span-2 md:row-span-1' : ''}
-                ${i === 2 ? 'col-span-1 md:col-span-1 md:row-span-1' : ''}
-                ${i === 3 ? 'col-span-1 md:col-span-1 md:row-span-1' : ''}
-                ${i === 4 ? 'col-span-2 md:col-span-2 md:row-span-1' : ''}
-                ${i === 5 ? 'col-span-1 md:col-span-1 md:row-span-1' : ''}
-                ${i === 6 ? 'col-span-1 md:col-span-1 md:row-span-1' : ''}`}
-            >
-              <img 
-                src={img.url} 
-                alt={img.title} 
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s] ease-out"
-              />
-             
+            <motion.div key={i} whileHover={{ y: -5 }} className="relative aspect-square rounded-xl md:rounded-2xl overflow-hidden border border-white/5 group">
+              <img src={img.url} alt="Bodywork" className="w-full h-full object-cover transition-all duration-700" />
             </motion.div>
           ))}
         </div>

@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Settings, Info, CheckCircle2, Camera } from 'lucide-react';
+import { Settings, Info, CheckCircle2, Camera ,ImageIcon} from 'lucide-react';
 import foto1 from '../assets/interior/foto1.jpg';
 import foto2 from '../assets/interior/foto2.jpg';
 import foto3 from '../assets/interior/foto3.jpg';
 import foto4 from '../assets/interior/foto4.jpg';
-import foto5 from '../assets/interior/foto5.jpg';
+
 
 const InteriorSeries = () => {
   const packages = [
@@ -41,7 +41,7 @@ const InteriorSeries = () => {
     }
   ];
 
-  const interiorGallery = [{ url: foto1 }, { url: foto2 }, { url: foto3 }, { url: foto4 }, { url: foto5 }];
+  const interiorGallery = [{ url: foto1 }, { url: foto2 }, { url: foto3 }, { url: foto4 }];
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8 md:py-12">
@@ -98,35 +98,22 @@ const InteriorSeries = () => {
         </div>
       </motion.div>
 
-      {/* GALLERY SECTION - FIXED DESKTOP HEIGHT */}
-      <div className="mt-20 md:mt-32 mb-10 md:mb-20">
-        <div className="flex flex-col items-center mb-12 md:mb-16">
-          <div className="flex items-center gap-3 mb-2">
-            <span className="h-[1px] w-8 md:w-12 bg-red-600"></span>
-            <Camera className="text-red-600" size={20} />
-            <span className="h-[1px] w-8 md:w-12 bg-red-600"></span>
+      {/* Grid Gallery Seragam */}
+      <div className="mt-20">
+        <div className="flex items-center gap-4 mb-10">
+          <div className="h-[1px] flex-1 bg-white/10"></div>
+          <div className="flex items-center gap-2">
+            <ImageIcon className="text-red-600" size={20} />
+            <h3 className="font-horizon text-lg md:text-xl text-white uppercase tracking-[0.2em] md:tracking-[0.3em]">Interior Gallery</h3>
           </div>
-          <h3 className="font-horizon text-3xl md:text-4xl text-white uppercase italic text-center">Interior Gallery</h3>
+          <div className="h-[1px] flex-1 bg-white/10"></div>
         </div>
 
-        {/* h-auto di mobile agar tidak dipaksa, md:h-[800px] agar di desktop panjangnya pas */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 h-auto md:h-[800px]">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
           {interiorGallery.map((img, i) => (
-            <motion.div
-              key={i}
-              className={`relative overflow-hidden rounded-[1.5rem] md:rounded-[3rem] border border-white/10 aspect-square md:aspect-auto min-h-0
-                ${i === 0 ? 'col-span-2 md:col-span-2 md:row-span-2' : ''} 
-                ${i === 1 ? 'col-span-2 md:col-span-2 md:row-span-1' : ''}
-                ${i === 2 ? 'col-span-1 md:col-span-1 md:row-span-1' : ''}
-                ${i === 3 ? 'col-span-1 md:col-span-1 md:row-span-1' : ''}
-                ${i === 4 ? 'col-span-2 md:col-span-2 md:row-span-1' : ''}`}
-            >
-              <img 
-                src={img.url} 
-                alt="Interior" 
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
-              />
-            </motion.div> 
+            <motion.div key={i} whileHover={{ y: -5 }} className="relative aspect-square rounded-xl md:rounded-2xl overflow-hidden border border-white/5 group">
+              <img src={img.url} alt="Interior" className="w-full h-full object-cover transition-all duration-700" />
+            </motion.div>
           ))}
         </div>
       </div>

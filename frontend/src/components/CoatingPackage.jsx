@@ -12,6 +12,8 @@ import foto3 from '../assets/coating/foto3.jpg';
 import foto4 from '../assets/coating/foto4.jpg';
 import foto5 from '../assets/coating/foto5.jpg';
 import foto6 from '../assets/coating/foto6.jpg';
+import foto7 from '../assets/coating/foto7.jpg';
+import foto8 from '../assets/coating/foto8.jpg';
 
 const CoatingPackage = () => {
   const packages = [
@@ -62,7 +64,7 @@ const CoatingPackage = () => {
     }
   ];
 
-  const galleryImages = [{ url: foto1 }, { url: foto2 }, { url: foto3 }, { url: foto4 }, { url: foto5 }, { url: foto6 }];
+  const galleryImages = [{ url: foto1 }, { url: foto2 }, { url: foto3 }, { url: foto4 }, { url: foto5 }, { url: foto6 }, { url: foto7 }, { url: foto8 }];
 
   return (
     <div className="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-16 bg-black">
