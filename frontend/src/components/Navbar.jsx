@@ -31,33 +31,47 @@ const Navbar = () => {
     { name: 'Find Us', id: 'footer' }
   ];
 
+  const handleScrollToSection = (e, id) => {
+    e.preventDefault(); 
+    setIsOpen(false);   
+
+    const element = document.getElementById(id);
+    if (element) {
+      const yOffset = -80; 
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-[100] px-6 md:px-12 transition-all duration-500 ${
+      // BACKGROUND SELALU SOLID #1a0812
+      className={`fixed top-0 left-0 w-full z-[100] px-6 md:px-12 transition-all duration-500 border-b bg-[#1a0812] ${
         isScrolled
-          // DIUBAH: Menghapus backdrop-blur-lg dan mengganti bg-black/80 menjadi bg-black solid
-          ? 'bg-black py-4 shadow-2xl' 
-          : 'bg-black py-6'
+          ? 'py-2 shadow-[0_4px_30px_rgba(244,168,208,0.1)] border-[#f4a8d0]/20' 
+          : 'py-4 border-transparent shadow-none'
       }`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center relative">
 
         {/* Logo Section */}
-        <div className="flex flex-col justify-center items-start group cursor-pointer relative z-[110]">
+        <div className="flex flex-col justify-center items-start group cursor-pointer relative z-[110] ">
           <img
             src={logo} 
             alt="Zyro Logo"
-            className="h-8 md:h-10 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+            className="h-10 md:h-14 w-auto object-contain group-hover:scale-105 rounded-full transition-transform duration-300 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]"
           />
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-10">
+        <div className="hidden md:flex items-center gap-12">
           {links.map((link) => (
             <a
               key={link.id}
               href={`#${link.id}`}
-              className="text-white/80 text-sm font-bold tracking-wider hover:text-magenta-300 transition-all uppercase"
+              onClick={(e) => handleScrollToSection(e, link.id)}
+              className="text-white/90 text-base font-black tracking-widest hover:text-[#f4a8d0] transition-all uppercase hover:-translate-y-1 block cursor-pointer"
             >
               {link.name}
             </a>
@@ -67,11 +81,11 @@ const Navbar = () => {
         {/* Mobile Toggle Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden flex items-center justify-center text-white p-2 -mr-2"
+          className="md:hidden flex items-center justify-center text-white p-2 -mr-2 relative z-[160]"
           style={{ WebkitTapHighlightColor: 'transparent' }}
           aria-label={isOpen ? 'Tutup menu' : 'Buka menu'}
         >
-          {isOpen ? <X size={32} /> : <Menu size={32} />}
+          {isOpen ? <X size={36} /> : <Menu size={36} />}
         </button>
       </div>
 
@@ -85,7 +99,6 @@ const Navbar = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
-              // DIUBAH: Menghapus backdrop-blur-md
               className="fixed inset-0 bg-black/90 z-[150] md:hidden"
             />
 
@@ -95,7 +108,7 @@ const Navbar = () => {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 h-screen w-[85vw] max-w-sm bg-[#050505] border-l border-white/10 z-[160] flex flex-col p-10 md:hidden shadow-[-20px_0_50px_rgba(0,0,0,0.5)]"
+              className="fixed top-0 right-0 h-screen w-[85vw] max-w-sm bg-[#1a0812] border-l border-[#f4a8d0]/20 z-[155] flex flex-col p-10 md:hidden shadow-[-20px_0_50px_rgba(0,0,0,0.8)]"
             >
               <div className="flex flex-col h-full justify-center space-y-8">
                 {links.map((link, i) => (
@@ -105,8 +118,8 @@ const Navbar = () => {
                     transition={{ delay: 0.1 + i * 0.1 }}
                     key={link.id}
                     href={`#${link.id}`}
-                    onClick={() => setIsOpen(false)}
-                    className="text-4xl font-black text-white hover:text-magenta-300 transition-colors uppercase italic tracking-tighter"
+                    onClick={(e) => handleScrollToSection(e, link.id)} 
+                    className="text-4xl font-black text-white hover:text-[#f4a8d0] transition-colors uppercase italic tracking-tighter cursor-pointer"
                   >
                     {link.name}
                   </motion.a>
@@ -116,9 +129,9 @@ const Navbar = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.6 }}
-                  className="mt-12 pt-12 border-t border-white/10"
+                  className="mt-12 pt-12 border-t border-[#f4a8d0]/20"
                 >
-                  <p className="text-xs font-bold text-gray-500 uppercase tracking-[0.3em] leading-loose">
+                  <p className="text-xs font-bold text-gray-400 uppercase tracking-[0.3em] leading-loose">
                     Zyro <br /> Autodetailing
                   </p>
                 </motion.div>

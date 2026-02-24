@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Instagram, Play } from "lucide-react";
+import { Instagram, Play, ChevronDown, ChevronUp } from "lucide-react";
 
 // 1. Import gambar & video secara manual dari folder assets
 import img1 from "../assets/gallery/1.jpg";
@@ -17,6 +17,9 @@ import spo3 from "../assets/logo/logo-s/3.jpg";
 import spo4 from "../assets/logo/logo-s/4.png";
 
 const About2 = () => {
+  // State untuk mengatur apakah semua gallery ditampilkan di HP
+  const [showAll, setShowAll] = useState(false);
+
   const instagramFeeds = [
     {
       thumbnail: img1,
@@ -102,7 +105,10 @@ const About2 = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
-              className="group relative aspect-square overflow-hidden rounded-[1rem] bg-zinc-900 border border-white/10 block"
+              // Logika Responsif: Sembunyikan item index ke-3 dst di HP jika showAll false
+              className={`group relative aspect-square overflow-hidden rounded-[1rem] bg-zinc-900 border border-white/10 ${
+                !showAll && i >= 3 ? 'hidden md:block' : 'block'
+              }`}
             >
               {isVideo(item.thumbnail) ? (
                 <video 
@@ -135,6 +141,20 @@ const About2 = () => {
               </div>
             </motion.a>
           ))}
+        </div>
+
+        {/* Tombol See More / Show Less - Hanya Muncul di HP (md:hidden) */}
+        <div className="mt-10 flex justify-center md:hidden">
+          <button 
+            onClick={() => setShowAll(!showAll)}
+            className="flex items-center gap-2 px-6 py-3 border border-magenta-300 text-magenta-300 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-magenta-300 hover:text-white transition-colors"
+          >
+            {showAll ? (
+              <>Show Less <ChevronUp size={16} /></>
+            ) : (
+              <>See More <ChevronDown size={16} /></>
+            )}
+          </button>
         </div>
 
         {/* --- SPONSORED BY SECTION --- */}
