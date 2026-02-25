@@ -2,7 +2,7 @@ import { Instagram, Mail, Phone, MapPin, Clock } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer id="footer" className="bg-gradient-to-br from-[#2d0f1e] via-[#1a0811] to-black text-white py-12 md:py-16 border-t border-pink-900/30 relative">
+    <footer id="footer" className="bg-zinc-800 text-white py-12 md:py-16 border-t border-pink-900/30 relative">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         
         {/* Top Section: 4 Columns Layout */}

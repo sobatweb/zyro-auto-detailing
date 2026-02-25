@@ -18,7 +18,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-32 bg-zinc-900">
+    <section className="py-32 bg-zinc-800">
       <div className="container mx-auto px-6 text-center mb-20">
         <h2 className="text-5xl font-black text-white italic uppercase">THE <span className="text-magenta-300">VERDICT.</span></h2>
       </div>
@@ -31,7 +31,7 @@ const Testimonials = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.1 }}
             // Jika showAll false dan index >= 3, sembunyikan di HP, tapi tetap tampilkan di Desktop (md:block)
-            className={`p-8 bg-white/5 rounded-[2rem] border border-white/10 hover:border-magenta-300/50 transition-colors group ${!showAll && i >= 3 ? 'hidden md:block' : 'block'
+            className={`p-8 bg-white/5 rounded-[2rem] border border-magenta-300/50 transition-colors group ${!showAll && i >= 3 ? 'hidden md:block' : 'block'
               }`}
           >
             <div className="flex justify-between items-start mb-6">
