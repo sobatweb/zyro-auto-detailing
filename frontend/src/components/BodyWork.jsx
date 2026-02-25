@@ -54,22 +54,25 @@ const BodyWork = () => {
         </div>
 
         <div className="w-full lg:w-1/2 space-y-4 md:space-y-6">
-          {points.map((item) => (
-            <motion.div 
-              key={item.id} 
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              className="flex gap-4 md:gap-6 p-5 md:p-6 rounded-[1.5rem] md:rounded-[2rem] bg-white/5 border border-white/10 transition-all hover:bg-white/10"
-            >
-              <div className={`w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center shrink-0`}>
-                <item.icon className="text-white" size={24} />
-              </div>
-              <div>
-                <h4 className="font-horizon text-base md:text-lg text-white uppercase">{item.title}</h4>
-                <p className="font-garet text-white/60 text-[10px] md:text-[11px] leading-relaxed uppercase">{item.desc}</p>
-              </div>
-            </motion.div>
+      {points.map((item) => (
+        <motion.div 
+          key={item.id} 
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }} 
+          viewport={{ once: true, amount: 0.2 }}
+          
+          className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 md:gap-6 p-5 md:p-6 rounded-[1.5rem] md:rounded-[2rem] bg-white/5 border border-white/10 transition-all hover:bg-white/10"
+        >
+          <div className={`w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center shrink-0`}>
+            <item.icon className="text-white" size={24} />
+          </div>
+          <div>
+            <h4 className="font-horizon text-base md:text-lg text-white uppercase">{item.title}</h4>
+            <p className="font-garet text-white/60 text-[10px] md:text-[11px] leading-relaxed uppercase max-w-xs sm:max-w-none">
+              {item.desc}
+            </p>
+          </div>
+        </motion.div>
           ))}
         </div>
       </div>
