@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Instagram, Play, ChevronDown, ChevronUp } from "lucide-react";
 
-// 1. Import gambar & video secara manual dari folder assets
 import img1 from "../assets/gallery/1.jpg";
 import img2 from "../assets/gallery/post-2.webp";
 import img3 from "../assets/gallery/post-3.webp";
@@ -17,7 +16,7 @@ import spo3 from "../assets/logo/logo-s/3.jpg";
 import spo4 from "../assets/logo/logo-s/4.png";
 
 const About2 = () => {
-  // State untuk mengatur apakah semua gallery ditampilkan di HP
+ 
   const [showAll, setShowAll] = useState(false);
 
   const instagramFeeds = [
@@ -105,7 +104,6 @@ const About2 = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
-              // Logika Responsif: Sembunyikan item index ke-3 dst di HP jika showAll false
               className={`group relative aspect-square overflow-hidden rounded-[1rem] bg-zinc-900 border border-white/10 ${
                 !showAll && i >= 3 ? 'hidden md:block' : 'block'
               }`}

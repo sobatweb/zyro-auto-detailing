@@ -96,14 +96,14 @@ const About = () => {
               <div className={`absolute inset-0 transition-opacity duration-500 ${hoveredIndex === index ? 'bg-black/40' : 'bg-black/60 md:bg-black/70'}`} />
 
               {/* Content Inside Card */}
-              {/* PERBAIKAN: Padding diperkecil di mobile, justify-end dipertahankan */}
+             
               <div className="absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col justify-end items-start">
 
                 {/* Container Text */}
-                {/* PERBAIKAN: Menghapus whitespace-nowrap agar teks bisa wrap ke bawah jika kepanjangan di mobile */}
+              
                 <motion.div
                   animate={{
-                    // Pada mobile (lebar penuh), jangan di-rotasi. Rotasi hanya di desktop (saat menyempit ke samping)
+                  
                     rotate: window.innerWidth < 768 ? 0 : (hoveredIndex === index ? 0 : -90),
                     y: hoveredIndex === index ? 0 : (window.innerWidth < 768 ? 0 : -20)
                   }}
@@ -113,14 +113,14 @@ const About = () => {
                   {/* Badge Tag */}
                   <motion.div
                     animate={{ opacity: hoveredIndex === index ? 1 : (window.innerWidth < 768 ? 1 : 0) }}
-                    // PERBAIKAN: Teks tag diperkecil, padding disesuaikan
+                   
                     className="bg-magenta-300 text-white font-garet text-[7px] md:text-[9px] lg:text-[10px] font-black uppercase px-2 py-1 md:px-3 md:py-1.5 rounded-full mb-2 md:mb-4 w-fit shadow-md tracking-widest line-clamp-1"
                   >
                     {item.tag}
                   </motion.div>
 
                   {/* Title */}
-                  {/* PERBAIKAN: Ukuran font diperkecil signifikan pada mode tertutup agar muat */}
+                  
                   <h3 className={`text-white font-horizon uppercase leading-tight md:leading-none transition-all duration-500 max-w-full
                     ${hoveredIndex === index 
                       ? 'text-lg sm:text-xl md:text-2xl lg:text-3xl' 
@@ -132,7 +132,7 @@ const About = () => {
 
                 {/* View Details Button */}
                 <div className="h-6 md:h-10 overflow-hidden"> 
-                  {/* Di mobile selalu munculin (atau atur sesuai keinginan), di desktop muncul saat hover */}
+                 
                   {(hoveredIndex === index || window.innerWidth < 768) && (
                     <motion.div
                       onClick={() => handleExplore(item.title)}

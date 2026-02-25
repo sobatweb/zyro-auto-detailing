@@ -2,24 +2,21 @@ import { motion } from 'framer-motion';
 import { ChevronRight, Sparkles, ShieldCheck, Star, Award } from 'lucide-react';
 
 import BgImage from '../assets/gallery/bg.jpeg';
-// Import logo sesuai struktur folder src kamu
+
 import LogoImg from '../assets/logo/logo1.webp';
 
-// Import gambar untuk carousel 
 import CarouselImg4 from '../assets/logo/logo-t/4.png';
 import CarouselImg5 from '../assets/logo/logo-t/5.png';
-import CarouselImg6 from '../assets/logo/logo-t/6.png';
-import CarouselImg7 from '../assets/logo/logo-t/7.png';
 import CarouselImg9 from '../assets/logo/logo-t/9.png';
 import CarouselImg10 from '../assets/logo/logo-t/10.png';
 import CarouselImg11 from '../assets/logo/logo-t/11.png';
 
 const Hero = () => {
-  const carouselImages = [CarouselImg4, CarouselImg5, CarouselImg6, CarouselImg7, CarouselImg9, CarouselImg10, CarouselImg11];
+  const carouselImages = [CarouselImg4, CarouselImg5, CarouselImg9, CarouselImg10, CarouselImg11];
   const services = ['Coating Package', 'Interior Series', 'Exterior Series', 'Body Work'];
 
   return (
-    // Tambahkan h-auto agar tidak memaksakan tinggi saat konten menumpuk di mobile
+   
     <section className="relative min-h-screen h-auto bg-[#000000] overflow-hidden flex flex-col lg:flex-row">
 
       {/* --- Global Background Image --- */}
@@ -37,7 +34,7 @@ const Hero = () => {
       </div>
 
       {/* --- Left Content (Logo & Floating Card) --- */}
-      {/* Padding disesuaikan untuk mobile agar tidak terlalu memakan layar */}
+     
       <div className="w-full lg:w-1/2 flex justify-center items-center px-6 md:px-12 lg:px-16 pt-28 lg:pt-0 pb-16 lg:pb-40 z-10 min-h-[50vh] lg:min-h-screen">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -52,7 +49,7 @@ const Hero = () => {
           />
 
           {/* --- Floating Card --- */}
-          {/* Posisi disesuaikan agar selalu berada di bawah logo tanpa menabrak konten lain */}
+       
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -78,7 +75,7 @@ const Hero = () => {
       </div>
 
       {/* --- Right Content (Text & Info) --- */}
-      {/* Diubah menjadi justify-center & text-center di mobile, text-right di desktop */}
+  
       <div className="w-full lg:w-1/2 flex flex-col justify-center items-center lg:items-end text-center lg:text-right px-4 sm:px-6 md:px-12 lg:px-16 pb-48 lg:pb-48 pt-8 lg:pt-24 z-10 min-h-[50vh] lg:min-h-screen">
 
         <motion.div
@@ -152,7 +149,7 @@ const Hero = () => {
       </div>
 
       {/* --- Carousel Marquee (Z-Index Tinggi, Background Gelap) --- */}
-      {/* Tambahkan z-50 agar selalu di atas konten yang ter-scroll */}
+     
       <div className="absolute bottom-0 left-0 w-full overflow-hidden bg-black/90 py-6 md:py-10 backdrop-blur-xl z-50 border-t border-white/10 flex items-center pt-12 md:pt-5">
         <div className="flex w-max animate-marquee gap-8 items-center">
           {[...carouselImages, ...carouselImages, ...carouselImages, ...carouselImages].map((img, i) => (

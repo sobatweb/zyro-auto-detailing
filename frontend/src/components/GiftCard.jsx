@@ -22,7 +22,7 @@ const GiftCard = () => {
         </motion.div>
       </div>
 
-      {/* --- BAGIAN YANG DIUBAH: Menggunakan h-auto agar fleksibel --- */}
+     
       <div className="container mx-auto px-4 md:px-10 flex justify-center items-center">
         <div className="relative w-full max-w-5xl perspective-1500">
           
@@ -34,10 +34,8 @@ const GiftCard = () => {
             }}
             whileHover={{ scale: 1.01 }}
             transition={{ duration: 0.8, type: "spring", bounce: 0.2 }}
-            // Hapus min-h statis, biarkan konten yang menentukan tinggi
             className="w-full relative preserve-3d cursor-pointer group h-auto"
           >
-            {/* --- FRONT: ENVELOPE STATE (Absolute agar mengikuti tinggi Back) --- */}
             <div 
               className="absolute inset-0 backface-hidden bg-[#0a0a0a] border border-white/10 rounded-[1rem] md:rounded-[1.5rem] flex flex-col items-center justify-center overflow-hidden transition-all duration-500 shadow-[0_0_30px_rgba(255,154,217,0.1)] group-hover:shadow-[0_0_50px_rgba(255,154,217,0.2)] z-20"
             >
@@ -73,12 +71,12 @@ const GiftCard = () => {
                   <span className="text-gray-500 font-bold text-[8px] md:text-[10px] uppercase tracking-[0.3em]">Zyro Auto Detailing</span>
                 </div>
 
-                {/* Body Content - Tetap Sesuai Permintaan */}
+                {/* Body Content */}
                 <div className="flex flex-col items-center justify-center z-10 w-full max-w-4xl mx-auto flex-grow py-4">
                   <Quote className="text-[#ff9ad9]/10 mb-4 md:mb-6" size={30} md:size={50} />
                   
                   <div className="space-y-6 text-center">
-                    {/* TEXT TETAP ORIGINAL */}
+                  
                     <p className="text-gray-400 font-medium text-sm md:text-base leading-relaxed italic">
                       Terima kasih sudah mempercayakan kendaraan Anda kepada Zyro Autodetailing. Bagi kami, setiap mobil yang datang bukan sekadar objek pengerjaan, melainkan simbol nilai dan kebanggaan yang layak dirawat dengan standar terbaik.
                     </p>

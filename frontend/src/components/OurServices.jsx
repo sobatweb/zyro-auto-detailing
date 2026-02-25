@@ -11,14 +11,12 @@ const OurServices = () => {
   useEffect(() => {
     const handleTabChange = (event) => {
       if (event.detail) {
-        setActiveTab(event.detail); // Ubah tab sesuai data yang dikirim
+        setActiveTab(event.detail); 
       }
     };
 
-    // Pasang listener saat komponen muncul
     window.addEventListener("changeServiceTab", handleTabChange);
 
-    // Bersihkan listener saat komponen hilang
     return () => window.removeEventListener("changeServiceTab", handleTabChange);
   }, []);
 

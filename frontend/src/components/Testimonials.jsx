@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { Star, ShieldCheck, ChevronDown, ChevronUp } from 'lucide-react';
 
 const Testimonials = () => {
-  // State untuk mengatur apakah semua review ditampilkan di HP
+  
   const [showAll, setShowAll] = useState(false);
 
   const reviews = [
@@ -30,7 +30,6 @@ const Testimonials = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.1 }}
-            // Jika showAll false dan index >= 3, sembunyikan di HP, tapi tetap tampilkan di Desktop (md:block)
             className={`p-8 bg-white/5 rounded-[2rem] border border-magenta-300/50 transition-colors group ${!showAll && i >= 3 ? 'hidden md:block' : 'block'
               }`}
           >
