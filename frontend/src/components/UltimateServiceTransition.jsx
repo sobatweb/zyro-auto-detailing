@@ -29,7 +29,7 @@ const UltimateServiceTransition = () => {
               System Analysis In Progress
             </motion.div>
             <h2 className="font-horizon text-2xl md:text-6xl text-white italic tracking-tighter leading-tight">
-              DRIVEN BY <span className="text-magenta-300 shadow-[0_0_30px_#FF9AD960]">PRECISION.</span>
+              DRIVEN BY <span className="text-magenta-300 ">PRECISION.</span>
             </h2>
         </div>
 

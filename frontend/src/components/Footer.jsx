@@ -32,7 +32,7 @@ const Footer = () => {
               href="https://www.google.com/maps/place/Zyro+Autodetailing/@-6.2009008,106.5211365,17z/data=!3m1!4b1!4m6!3m5!1s0x2e4201004db9d6e5:0xc30c41eb2e711c2c!8m2!3d-6.2009008!4d106.5237114!16s%2Fg%2F11yklwhy2v?hl=id-ID&entry=ttu&g_ep=EgoyMDI2MDIxOC4wIKXMDSoASAFQAw%3D%3D" 
               target="_blank" 
               rel="noreferrer"
-              className="inline-block bg-fuchsia-500 hover:bg-white text-fuchsia-100 hover:text-magenta-300 text-sm font-bold py-2.5 px-6 rounded-full transition-colors"
+              className="inline-block bg-magenta-300 hover:bg-white text-white hover:text-magenta-300 text-sm font-bold py-2.5 px-6 rounded-full transition-colors"
             >
               Open On Google Maps
             </a>

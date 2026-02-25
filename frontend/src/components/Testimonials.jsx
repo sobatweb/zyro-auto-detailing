@@ -51,8 +51,8 @@ const Testimonials = () => {
               </div>
             </div>
             <div className="mt-6 pt-4 border-t border-white/5 flex justify-between">
-              <span className="text-[8px] font-black text-gray-700 uppercase tracking-[0.3em]">{r.status}</span>
-              <span className="text-[8px] font-black text-gray-800 uppercase tracking-widest">Verified Review</span>
+              <span className="text-[8px] font-black text-gray-300 uppercase tracking-[0.3em]">{r.status}</span>
+              <span className="text-[8px] font-black text-gray-400 uppercase tracking-widest">Verified Review</span>
             </div>
           </motion.div>
         ))}
