@@ -72,7 +72,7 @@ const About = () => {
         </div>
 
         {/* --- DYNAMIC ACCORDION LAYOUT --- */}
-        <div className="flex flex-col md:flex-row gap-3 h-[500px] sm:h-[600px] md:h-[500px] mb-16">
+        <div className="flex flex-col md:flex-row gap-3 h-[500px] sm:h-[600px] md:h-[500px] mb-16 mt-20">
           {services.map((item, index) => (
             <motion.div
               onClick={() => handleExplore(item.title)}
