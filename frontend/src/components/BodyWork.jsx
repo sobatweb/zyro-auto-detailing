@@ -2,10 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Wrench, Paintbrush, Layers, Camera,ImageIcon } from 'lucide-react';
 
-import foto1 from '../assets/bodywork/foto1.jpg';
-import foto3 from '../assets/bodywork/foto3.jpg';
-import foto4 from '../assets/bodywork/foto4.jpg';
-import foto8 from '../assets/bodywork/foto8.jpg';
+import foto1 from '../assets/bodywork/foto1.webp';
+import foto3 from '../assets/bodywork/foto3.webp';
+import foto4 from '../assets/bodywork/foto4.webp';
+import foto8 from '../assets/bodywork/foto8.webp';
 
 const BodyWork = () => {
   const points = [
@@ -31,28 +31,28 @@ const BodyWork = () => {
       color: "from-orange-500 to-yellow-500"
     }
   ];
-
+ 
   const bodyGallery = [
     { url: foto1 },
     { url: foto3 },
     { url: foto4 },
     { url: foto8 }
   ];
-
+ 
   return (
     <div className="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-24 overflow-x-hidden">
       {/* Hero Section */}
       <div className="flex flex-col lg:flex-row gap-10 md:gap-16 items-center mb-24 md:mb-40">
         <div className="w-full lg:w-1/2 space-y-4 md:space-y-6 text-center lg:text-left">
-          <h2 className="font-horizon text-[26px] sm:text-4xl md:text-5xl text-white tracking-tight md:tracking-tighter italic leading-[1.1] md:leading-none break-words">
+          <h3 className="font-horizon text-[26px] sm:text-4xl md:text-5xl text-white tracking-tight md:tracking-tighter italic leading-[1.1] md:leading-none break-words">
             RESTORATION & <br />
             <span className="text-magenta-300">PERFECTION.</span>
-          </h2>
+          </h3>
           <p className="font-garet text-white/50 text-[10px] md:text-sm max-w-md mx-auto lg:mx-0 uppercase tracking-[0.2em]">
             Standard profesional untuk hasil yang tak tertandingi.
           </p>
         </div>
-
+ 
         <div className="w-full lg:w-1/2 space-y-4 md:space-y-6">
       {points.map((item) => (
         <motion.div 
@@ -76,7 +76,7 @@ const BodyWork = () => {
           ))}
         </div>
       </div>
-
+ 
      {/* Grid Gallery Seragam */}
       <div className="mt-20">
         <div className="flex items-center gap-4 mb-10">
@@ -87,11 +87,11 @@ const BodyWork = () => {
           </div>
           <div className="h-[1px] flex-1 bg-white/10"></div>
         </div>
-
+ 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
           {bodyGallery.map((img, i) => (
             <motion.div key={i} whileHover={{ y: -5 }} className="relative aspect-square rounded-xl md:rounded-2xl overflow-hidden border border-white/5 group">
-              <img src={img.url} alt="Bodywork" className="w-full h-full object-cover transition-all duration-700" />
+              <img src={img.url} alt={`Hasil body repair & repaint mobil Zyro Autodetailing ${i + 1}`} loading="lazy" className="w-full h-full object-cover transition-all duration-700" />
             </motion.div>
           ))}
         </div>
@@ -99,5 +99,5 @@ const BodyWork = () => {
     </div>
   );
 };
-
+ 
 export default BodyWork;

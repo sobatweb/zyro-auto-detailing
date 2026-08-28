@@ -6,13 +6,14 @@ import ProMaster from '../assets/logo/ProMaster.webp';
 import CPF1 from '../assets/logo/Cpf1.webp';
 import Llumar from '../assets/logo/Llumar.webp';
 import ThreeM from '../assets/logo/3mAuto.webp';
-import foto1 from '../assets/exterior/foto1.jpg';
-import foto2 from '../assets/exterior/foto2.jpg';
-import foto3 from '../assets/exterior/foto3.jpg';
-import foto4 from '../assets/exterior/foto4.jpg';
+import foto1 from '../assets/exterior/foto1.webp';
+import foto2 from '../assets/exterior/foto2.webp';
+import foto3 from '../assets/exterior/foto3.webp';
+import foto4 from '../assets/exterior/foto4.webp';
 
 
 
+ 
 const ExteriorSeries = () => {
   const packages = [
     {
@@ -76,9 +77,9 @@ const ExteriorSeries = () => {
       ]
     }
   ];
-
+ 
   const exteriorGallery = [{ url: foto1 }, { url: foto2 }, { url: foto3 }, { url: foto4 }];
-
+ 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12 md:py-20">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -95,9 +96,9 @@ const ExteriorSeries = () => {
               className="relative w-32 h-32 md:w-36 md:h-36 rounded-full overflow-hidden mb-6 border-2 shadow-[0_0_20px_rgba(0,0,0,0.5)] flex-shrink-0"
               style={{ borderColor: pkg.accent }}
             >
-              <img src={pkg.image} alt={pkg.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <img src={pkg.image} alt={`Kaca film ${pkg.name} - Zyro Autodetailing`} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
             </div>
-
+ 
             <h3 className="font-horizon text-2xl md:text-3xl text-white uppercase italic tracking-tighter text-center mb-4 leading-none">
               <span style={{ color: pkg.accent }}>{pkg.name.split(' ')[0]}</span> <br />
               {pkg.name.split(' ').slice(1).join(' ')}
@@ -106,13 +107,13 @@ const ExteriorSeries = () => {
             <p className="font-garet text-white text-[12px] leading-relaxed text-center mb-8 opacity-90 px-2">
               {pkg.desc}
             </p>
-
+ 
             <div className="mt-auto w-full space-y-3 pt-6 border-t border-white/10">
               <div className="flex items-center justify-center gap-2 mb-2">
                 <CheckCircle2 size={12} style={{ color: pkg.accent }} />
                 <span className="font-horizon text-[9px] text-white/50 uppercase tracking-[0.3em]">Full Set Pricing</span>
               </div>
-
+ 
               {pkg.pricing.map((p, i) => (
                 <div key={i} className="flex justify-between items-center bg-white/5 px-5 py-3.5 rounded-2xl border border-white/10">
                   <span className="font-horizon text-[10px] text-gray-300 uppercase tracking-widest">{p.cat}</span>
@@ -120,7 +121,7 @@ const ExteriorSeries = () => {
                 </div>
               ))}
             </div>
-
+ 
             <div 
               className="absolute -bottom-10 -right-10 w-32 h-32 blur-[30px] opacity-20 rounded-full"
               style={{ backgroundColor: pkg.accent }}
@@ -128,7 +129,7 @@ const ExteriorSeries = () => {
           </motion.div>
         ))}
       </div>
-
+ 
      {/* Grid Gallery Seragam */}
       <div className="mt-20">
         <div className="flex items-center gap-4 mb-10">
@@ -139,11 +140,11 @@ const ExteriorSeries = () => {
           </div>
           <div className="h-[1px] flex-1 bg-white/10"></div>
         </div>
-
+ 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
           {exteriorGallery.map((img, i) => (
             <motion.div key={i} whileHover={{ y: -5 }} className="relative aspect-square rounded-xl md:rounded-2xl overflow-hidden border border-white/5 group">
-              <img src={img.url} alt="Exterior" className="w-full h-full object-cover transition-all duration-700" />
+              <img src={img.url} alt={`Hasil pemasangan kaca film exterior mobil Zyro Autodetailing ${i + 1}`} loading="lazy" className="w-full h-full object-cover transition-all duration-700" />
             </motion.div>
           ))}
         </div>
@@ -151,5 +152,5 @@ const ExteriorSeries = () => {
     </div>
   );
 };
-
+ 
 export default ExteriorSeries;

@@ -1,5 +1,3 @@
-
-
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Star, ShieldCheck, ChevronDown, ChevronUp } from 'lucide-react';
@@ -45,7 +43,7 @@ const Testimonials = () => {
             <div className="flex items-center gap-4">
               <div className="w-10 h-10 rounded-full bg-magenta-300 flex items-center justify-center font-black text-white italic">{r.name[0]}</div>
               <div>
-                <h4 className="text-white font-black text-[10px] uppercase tracking-tighter">{r.name}</h4>
+                <p className="text-white font-black text-[10px] uppercase tracking-tighter">{r.name}</p>
                 <p className="text-magenta-300 text-[8px] font-black uppercase tracking-widest">{r.car}</p>
               </div>
             </div>

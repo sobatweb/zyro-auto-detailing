@@ -6,14 +6,14 @@ import dailyShieldLogo from '../assets/logo/DailyShield.webp';
 import primeLogo from '../assets/logo/Prime.webp';
 import vintageLogo from '../assets/logo/Vintage.webp';
 import prestigeLogo from '../assets/logo/Prestige.webp';
-import foto1 from '../assets/coating/foto1.jpg';
-import foto2 from '../assets/coating/foto2.jpg';
-import foto3 from '../assets/coating/foto3.jpg';
-import foto4 from '../assets/coating/foto4.jpg';
-import foto5 from '../assets/coating/foto5.jpg';
-import foto6 from '../assets/coating/foto6.jpg';
-import foto7 from '../assets/coating/foto7.jpg';
-import foto8 from '../assets/coating/foto8.jpg';
+import foto1 from '../assets/coating/foto1.webp';
+import foto2 from '../assets/coating/foto2.webp';
+import foto3 from '../assets/coating/foto3.webp';
+import foto4 from '../assets/coating/foto4.webp';
+import foto5 from '../assets/coating/foto5.webp';
+import foto6 from '../assets/coating/foto6.webp';
+import foto7 from '../assets/coating/foto7.webp';
+import foto8 from '../assets/coating/foto8.webp';
 
 const CoatingPackage = () => {
   const packages = [
@@ -63,9 +63,9 @@ const CoatingPackage = () => {
       stats: [{ label: "Gloss", val: "A+" }, { label: "Tahan Kusam", val: "A+" }, { label: "Tahan Menguning", val: "A+" }, { label: "Pelindung Noda", val: "A+" }, { label: "Hydrophobic", val: "A+" }]
     }
   ];
-
+ 
   const galleryImages = [{ url: foto1 }, { url: foto2 }, { url: foto3 }, { url: foto4 }, { url: foto5 }, { url: foto6 }, { url: foto7 }, { url: foto8 }];
-
+ 
   return (
     <div className="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-16 bg-black">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -77,7 +77,7 @@ const CoatingPackage = () => {
           >
             <div className="flex gap-4 md:gap-6 items-center mb-6">
               <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 shrink-0 overflow-hidden" style={{ borderColor: pkg.accent }}>
-                <img src={pkg.logo} alt={pkg.name} className="w-full h-full object-cover" />
+                <img src={pkg.logo} alt={`Logo paket ${pkg.name} - Zyro Autodetailing`} loading="lazy" className="w-full h-full object-cover" />
               </div>
               <div className="space-y-1 md:space-y-2">
                 <h3 className="font-horizon text-xl md:text-2xl text-white uppercase italic leading-tight">
@@ -94,11 +94,11 @@ const CoatingPackage = () => {
                 </div>
               </div>
             </div>
-
+ 
             <p className="font-garet text-white text-[11px] leading-relaxed mb-6 opacity-90 border-l-2 pl-4" style={{ borderColor: `${pkg.accent}44` }}>
               {pkg.desc}
             </p>
-
+ 
             <div className="mt-auto pt-6 border-t border-white/10">
               <div className="grid grid-cols-2 gap-x-4 gap-y-3">
                 {pkg.stats.map((stat, i) => (
@@ -112,7 +112,7 @@ const CoatingPackage = () => {
           </motion.div>
         ))}
       </div>
-
+ 
       <div className="mt-20">
         <div className="flex items-center gap-4 mb-10">
           <div className="h-[1px] flex-1 bg-white/10"></div>
@@ -122,11 +122,11 @@ const CoatingPackage = () => {
           </div>
           <div className="h-[1px] flex-1 bg-white/10"></div>
         </div>
-
+ 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
           {galleryImages.map((img, i) => (
             <motion.div key={i} whileHover={{ y: -5 }} className="relative aspect-square rounded-xl md:rounded-2xl overflow-hidden border border-white/5 group">
-              <img src={img.url} alt="Coating" className="w-full h-full object-cover transition-all duration-700" />
+              <img src={img.url} alt={`Hasil ceramic coating mobil Zyro Autodetailing ${i + 1}`} loading="lazy" className="w-full h-full object-cover transition-all duration-700" />
             </motion.div>
           ))}
         </div>
@@ -134,5 +134,5 @@ const CoatingPackage = () => {
     </div>
   );
 };
-
+ 
 export default CoatingPackage;

@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 
-import int from "../assets/gallery/int.jpg";
-import ext from "../assets/gallery/ext.jpg";
-import rep from "../assets/gallery/repair.jpeg";
-import coa from "../assets/gallery/coating.jpg";
+import int from "../assets/gallery/int.webp";
+import ext from "../assets/gallery/ext.webp";
+import rep from "../assets/gallery/repair.webp";
+import coa from "../assets/gallery/coating.webp";
 
 const About = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);

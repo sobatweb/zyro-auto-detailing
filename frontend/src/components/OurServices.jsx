@@ -7,26 +7,26 @@ import BodyWork from './BodyWork';
 
 const OurServices = () => {
  const [activeTab, setActiveTab] = useState('coating');
-
+ 
   useEffect(() => {
     const handleTabChange = (event) => {
       if (event.detail) {
         setActiveTab(event.detail); 
       }
     };
-
+ 
     window.addEventListener("changeServiceTab", handleTabChange);
-
+ 
     return () => window.removeEventListener("changeServiceTab", handleTabChange);
   }, []);
-
+ 
   const menuItems = [
     { id: 'coating', label: 'Coating Package' },
     { id: 'interior', label: 'Interior Series' },
     { id: 'exterior', label: 'Exterior Series' },
     { id: 'bodywork', label: 'Body Work' },
   ];
-
+ 
   const renderContent = () => {
     switch (activeTab) {
       case 'coating': return <CoatingPackage />;
@@ -36,21 +36,21 @@ const OurServices = () => {
       default: return <CoatingPackage />;
     }
   };
-
+ 
   return (
     <section id="our-service" className="py-24 bg-[#000000] min-h-screen overflow-hidden">
       <div className="container mx-auto px-6">
         
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h4 className="font-have-heart text-magenta-300 text-3xl md:text-5xl mb-2 lowercase">
+          <span className="font-have-heart text-magenta-300 text-3xl md:text-5xl mb-2 lowercase block">
             Our Premium
-          </h4>
+          </span>
           <h2 className="font-horizon text-white text-4xl md:text-7xl uppercase tracking-tighter">
             SERVICES
           </h2>
         </div>
-
+ 
         {/* Navigation Tabs */}
         <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-20 border-b border-white/10 pb-6">
           {menuItems.map((item) => (
@@ -73,7 +73,7 @@ const OurServices = () => {
             </button>
           ))}
         </div>
-
+ 
         {/* Dynamic Content Area */}
         <div className="relative">
           <AnimatePresence mode="wait">
@@ -89,7 +89,7 @@ const OurServices = () => {
           </AnimatePresence>
         </div>
       </div>
-
+ 
       <style jsx>{`
         .font-horizon { font-family: 'Horizon', sans-serif; }
         .font-garet { font-family: 'Garet', sans-serif; }
@@ -98,5 +98,5 @@ const OurServices = () => {
     </section>
   );
 };
-
+ 
 export default OurServices;

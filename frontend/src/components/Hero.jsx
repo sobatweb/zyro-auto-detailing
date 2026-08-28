@@ -1,24 +1,25 @@
 import { motion } from 'framer-motion';
 import { ChevronRight, Sparkles, ShieldCheck, Star, Award } from 'lucide-react';
 
-import BgImage from '../assets/gallery/bg.jpeg';
+import BgImage from '../assets/gallery/bg.webp';
 
 import LogoImg from '../assets/logo/logo1.webp';
 
-import CarouselImg4 from '../assets/logo/logo-t/4.png';
-import CarouselImg5 from '../assets/logo/logo-t/5.png';
-import CarouselImg9 from '../assets/logo/logo-t/9.png';
-import CarouselImg10 from '../assets/logo/logo-t/10.png';
-import CarouselImg11 from '../assets/logo/logo-t/11.png';
+import CarouselImg4 from '../assets/logo/logo-t/4.webp';
+import CarouselImg5 from '../assets/logo/logo-t/5.webp';
+import CarouselImg9 from '../assets/logo/logo-t/9.webp';
+import CarouselImg10 from '../assets/logo/logo-t/10.webp';
+import CarouselImg11 from '../assets/logo/logo-t/11.webp';
+
 
 const Hero = () => {
   const carouselImages = [CarouselImg4, CarouselImg5, CarouselImg9, CarouselImg10, CarouselImg11];
   const services = ['Coating Package', 'Interior Series', 'Exterior Series', 'Body Work'];
-
+ 
   return (
    
     <section className="relative min-h-screen h-auto bg-[#000000] overflow-hidden flex flex-col lg:flex-row">
-
+ 
       {/* --- Global Background Image --- */}
       <div className="absolute inset-0 w-full h-full z-0">
         <div className="absolute inset-0 bg-black/80 lg:bg-black/70 z-10" />
@@ -27,12 +28,12 @@ const Hero = () => {
           animate={{ scale: 1, opacity: 0.6 }}
           transition={{ duration: 1.5 }}
           src={BgImage}
-          alt="Auto Detailing Background"
+          alt="Zyro Autodetailing - bengkel auto detailing dan coating mobil profesional"
           className="w-full h-full object-cover grayscale object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-black via-black/50 to-transparent z-10" />
       </div>
-
+ 
       {/* --- Left Content (Logo & Floating Card) --- */}
      
       <div className="w-full lg:w-1/2 flex justify-center items-center px-6 md:px-12 lg:px-16 pt-28 lg:pt-0 pb-16 lg:pb-40 z-10 min-h-[50vh] lg:min-h-screen">
@@ -44,10 +45,10 @@ const Hero = () => {
         >
           <img
             src={LogoImg}
-            alt="Hero Visual"
+            alt="Logo Zyro Autodetailing"
             className="w-full h-auto object-contain drop-shadow-[0_0_30px_rgba(255,154,217,0.3)] pb-16 lg:pb-12"
           />
-
+ 
           {/* --- Floating Card --- */}
        
           <motion.div
@@ -73,11 +74,11 @@ const Hero = () => {
           </motion.div>
         </motion.div>
       </div>
-
+ 
       {/* --- Right Content (Text & Info) --- */}
   
       <div className="w-full lg:w-1/2 flex flex-col justify-center items-center lg:items-end text-center lg:text-right px-4 sm:px-6 md:px-12 lg:px-16 pb-48 lg:pb-48 pt-8 lg:pt-24 z-10 min-h-[50vh] lg:min-h-screen">
-
+ 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -89,7 +90,7 @@ const Hero = () => {
             Auto Detailing
           </span>
         </motion.div>
-
+ 
         <motion.h1
           initial={{ x: 40, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -99,7 +100,7 @@ const Hero = () => {
           SHINE <br />
           <span className="text-magenta-300 font-horizon-outline stroke-text">AS YOU LIKE</span>
         </motion.h1>
-
+ 
         {/* Tags Services - rata tengah di mobile */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -116,7 +117,7 @@ const Hero = () => {
             </span>
           ))}
         </motion.div>
-
+ 
         {/* Feature Cards - Gunakan Grid agar proporsional di mobile */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -131,23 +132,23 @@ const Hero = () => {
               <span className="text-white font-garet font-black text-[9px] sm:text-[11px] md:text-xs uppercase tracking-widest italic leading-none mt-1">QUALITY</span>
               <span className="text-gray-400 font-garet text-[7px] sm:text-[8px] md:text-[9px] uppercase tracking-wider font-bold">Over Money</span>
             </div>
-
+ 
             <div className="flex flex-col items-center justify-start text-center gap-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl md:rounded-2xl p-2 sm:p-4 md:p-5 w-full md:w-[130px] lg:w-[140px] hover:bg-white/10 transition-colors">
               <ShieldCheck size={18} className="text-magenta-300 mb-1" />
               <span className="text-white font-garet font-black text-[9px] sm:text-[11px] md:text-xs uppercase tracking-widest italic leading-none mt-1">TRUST</span>
               <span className="text-gray-400 font-garet text-[7px] sm:text-[8px] md:text-[9px] uppercase tracking-wider font-bold">Is Our Reward</span>
             </div>
-
+ 
             <div className="flex flex-col items-center justify-start text-center gap-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl md:rounded-2xl p-2 sm:p-4 md:p-5 w-full md:w-[130px] lg:w-[140px] hover:bg-white/10 transition-colors">
               <Award size={18} className="text-magenta-300 mb-1" />
               <span className="text-white font-garet font-black text-[9px] sm:text-[11px] md:text-xs uppercase tracking-widest italic leading-none mt-1">EXCEED</span>
               <span className="text-gray-400 font-garet text-[7px] sm:text-[8px] md:text-[9px] uppercase tracking-wider font-bold">Expectations</span>
             </div>
-
+ 
           </div>
         </motion.div>
       </div>
-
+ 
       {/* --- Carousel Marquee (Z-Index Tinggi, Background Gelap) --- */}
      
       <div className="absolute bottom-0 left-0 w-full overflow-hidden bg-black/90 py-6 md:py-10 backdrop-blur-xl z-50 border-t border-white/10 flex items-center pt-12 md:pt-5">
@@ -156,14 +157,15 @@ const Hero = () => {
             <div key={i} className="flex-shrink-0 w-28 md:w-44 lg:w-52 flex justify-center items-center px-4">
               <img
                 src={img}
-                alt={`Brand ${i}`}
+                alt={`Partner brand kaca film dan coating Zyro Autodetailing ${(i % carouselImages.length) + 1}`}
+                loading="lazy"
                 className="h-24 md:h-22 lg:h-24 w-auto object-contain opacity-100 transition-all duration-300"
               />
             </div>
           ))}
         </div>
       </div>
-
+ 
       <style>{`
         .stroke-text { 
            -webkit-text-stroke: 1.5px rgba(255,255,255,0.3); 
@@ -171,7 +173,7 @@ const Hero = () => {
         @media (min-width: 1024px) {
           .stroke-text { -webkit-text-stroke: 2px rgba(255,255,255,0.5); }
         }
-
+ 
         @keyframes marquee {
           0% { transform: translateX(0); }
           100% { transform: translateX(-50%); } 
@@ -186,5 +188,5 @@ const Hero = () => {
     </section>
   );
 };
-
-export default Hero;
+ 
+export  default Hero;
